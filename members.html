@@ -8,42 +8,63 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-light">
-  <!-- Navbar略（同じ） -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">ChillCraftJP</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">ホーム</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">ギルド概要</a></li>
-        <li class="nav-item"><a class="nav-link" href="members.html">メンバー</a></li>
-        <li class="nav-item"><a class="nav-link" href="events.html">イベント</a></li>
-        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">ギャラリー</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">お問い合わせ</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://discord.gg/YE9gFAGrQe" target="_blank">Discord参加</a></li>
-      </ul>
+  <!-- Navbar（共通） -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">ChillCraftJP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">ホーム</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ギルド概要</a></li>
+          <li class="nav-item"><a class="nav-link active" href="members.html">メンバー</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">イベント</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">ギャラリー</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">お問い合わせ</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://discord.gg/YE9gFAGrQe" target="_blank">Discord参加</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
   <main class="container mt-5">
-    <h2>メンバー紹介</h2>
+    <h2 class="mb-4">メンバー紹介</h2>
     <div class="row">
-      <div class="col-md-6">
-        <div class="card mb-4">
-          <div class="card-body text-center">
-            <img src="img/master.png" class="rounded-circle mb-2" style="width:90px;" alt="Guild Master">
+      <!-- Guild Master Card -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 text-center border-primary">
+          <img src="img/master.png" class="card-img-top rounded-circle mx-auto mt-3" style="width:90px;" alt="Guild Master">
+          <div class="card-body">
             <h5 class="card-title">Guild Master: あなたの名前</h5>
-            <p class="card-text">運営・方針・イベント担当。ゲームも雑談も大好きです！</p>
+            <p class="card-text">運営・方針・イベント担当。ゲームも雑談も大好き！</p>
           </div>
         </div>
       </div>
-      <!-- 他メンバー追加もOK。カード要素をコピペで増やせます -->
+      <!-- Sub Master Card（例） -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 text-center border-info">
+          <img src="img/submaster.png" class="card-img-top rounded-circle mx-auto mt-3" style="width:90px;" alt="Sub Master">
+          <div class="card-body">
+            <h5 class="card-title">Sub Master: サブマスターの名前</h5>
+            <p class="card-text">企画担当・新規さん対応！やさしく盛り上げます。</p>
+          </div>
+        </div>
+      </div>
+      <!-- Member Card（例） -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img src="img/member.png" class="card-img-top rounded-circle mx-auto mt-3" style="width:90px;" alt="Member">
+          <div class="card-body">
+            <h5 class="card-title">Member: メンバー名</h5>
+            <p class="card-text">Hypixel大好き！みんなで遊ぶのが楽しみです。</p>
+          </div>
+        </div>
+      </div>
+      <!-- 他メンバーは同じ形式で追加・並べるだけ -->
     </div>
-    <h5>その他のメンバーリストやDiscord名なども自由記載可能です</h5>
+    <h5 class="mt-4">役職ごとの役割・自己紹介も自由に追加できます！</h5>
   </main>
   <footer class="bg-dark text-white text-center py-3 mt-5">
     © 2025 ChillCraftJP
