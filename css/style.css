@@ -8,3 +8,18 @@ header img {
 body {
   font-family: 'Yu Gothic', 'Meiryo', sans-serif;
 }
+body.dark-mode {
+  background-color: #181818 !important;
+  color: #f1f1f1;
+}
+.navbar.dark-mode,
+footer.dark-mode {
+  background: #222 !important;
+  color: #eee !important;
+}
+.card.dark-mode,
+.accordion.dark-mode {
+  background: #242526 !important;
+  color: #eee !important;
+}
+/* 任意でlist, btn, h1等の追加装飾も */
