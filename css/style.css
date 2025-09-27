@@ -1,3 +1,7 @@
+:root {
+  --bs-primary: #2986cc;   /* メインカラー例（チル系ブルー） */
+  --bs-secondary: #45b6fe; /* サブカラー例 */
+}
 header img {
   /* バナー画像に枠線を付ける例 */
   border-radius: 15px;
@@ -5,7 +9,36 @@ header img {
 }
 
 body {
-  font-family: 'Yu Gothic', 'Meiryo', sans-serif;
+  font-family: 'Noto Sans JP', 'Roboto', 'Yu Gothic', 'Meiryo', sans-serif;
+}
+h1, h2, h3, .navbar-brand {
+  font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.card {
+  border-radius: 17px;
+  box-shadow: 0 2px 9px #0001;
+}
+
+.navbar {
+  box-shadow: 0 0 8px #2986cc44;
+}
+
+.btn {
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* マウスオーバー時 */
+.btn-primary:hover {
+  background: #0072b1;
+  color: #fff;
 }
 body.dark-mode {
   background-color: #181818 !important;
