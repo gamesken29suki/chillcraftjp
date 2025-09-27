@@ -2,41 +2,57 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>ChillCraftJP - イベント</title>
+  <title>ChillCraftJP - イベント情報</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-light">
-  <!-- Navbar略（同じ） -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">ChillCraftJP</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+  <!-- Navbar（共通） -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">ChillCraftJP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">ホーム</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">ギルド概要</a></li>
         <li class="nav-item"><a class="nav-link" href="members.html">メンバー</a></li>
-        <li class="nav-item"><a class="nav-link" href="events.html">イベント</a></li>
+        <li class="nav-item"><a class="nav-link active" href="events.html">イベント</a></li>
         <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">ギャラリー</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">お問い合わせ</a></li>
         <li class="nav-item"><a class="nav-link" href="https://discord.gg/YE9gFAGrQe" target="_blank">Discord参加</a></li>
       </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
   <main class="container mt-5">
-    <h2>イベント情報</h2>
-    <ul class="list-group mb-4">
-      <li class="list-group-item">10月●日：建築コンテスト開催！</li>
-      <li class="list-group-item">毎週日曜夜：まったり雑談VC</li>
-    </ul>
+    <h2 class="mb-4">イベント情報</h2>
+    <div class="card mb-4">
+      <div class="card-body">
+        <h4>近日開催予定</h4>
+        <ul class="list-group">
+          <li class="list-group-item">10月●日：ギルド建築コンテスト開催！</li>
+          <li class="list-group-item">毎週日曜夜：まったりVC雑談タイム</li>
+          <li class="list-group-item">ミニゲーム大会（SkyWars/BedWars など）不定期開催</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h4>過去の主なイベント</h4>
+        <ul class="list-group">
+          <li class="list-group-item">9月某日：第1回メンバー交流会</li>
+          <li class="list-group-item">8月某日：Hypixel建築大会</li>
+        </ul>
+      </div>
+    </div>
     <div class="alert alert-info mt-4">
-      詳細・参加方法はDiscordでご案内します。
+      詳細・参加方法はDiscordサーバーへ！  
+      <a href="https://discord.gg/YE9gFAGrQe" target="_blank" class="btn btn-primary btn-sm ms-2">今すぐ参加</a>
     </div>
   </main>
   <footer class="bg-dark text-white text-center py-3 mt-5">
