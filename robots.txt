@@ -1,3 +1,6 @@
+User-agent: Googlebot-Image
+Disallow: /img/
+
 User-agent: *
 Allow: /
 Sitemap: https://gamesken29suki.github.io/chillcraftjp/sitemap.xml
