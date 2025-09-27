@@ -1,45 +1,53 @@
 :root {
-  --bs-primary: #2986cc;   /* メインカラー例（チル系ブルー） */
-  --bs-secondary: #45b6fe; /* サブカラー例 */
-}
-header img {
-  /* バナー画像に枠線を付ける例 */
-  border-radius: 15px;
-  border: 2px solid #4ea3ff;
+  --bs-primary: #2986cc;     /* チル系ブルー */
+  --bs-secondary: #45b6fe;   /* サブ（ライトブルー） */
+  --bs-success: #53e1c3;
+  --bs-warning: #ffe457;
+  --bs-danger: #dd578c;
+  --bs-dark: #222946;
 }
 
+/* フォント全体指定 */
 body {
-  font-family: 'Noto Sans JP', 'Roboto', 'Yu Gothic', 'Meiryo', sans-serif;
+  font-family: 'Noto Sans JP', 'Roboto', 'Meiryo', 'Yu Gothic', sans-serif;
+  background-color: #f3f5fa;
+  color: #222946;
 }
 h1, h2, h3, .navbar-brand {
   font-family: 'Noto Sans JP', 'Roboto', sans-serif;
   letter-spacing: 0.05em;
-}
-
-.navbar-brand {
   font-weight: bold;
-  font-size: 1.7rem;
-}
-.card {
-  border-radius: 17px;
-  box-shadow: 0 2px 9px #0001;
 }
 
-.navbar {
-  box-shadow: 0 0 8px #2986cc44;
+/* カード・ナビ・ボタン装飾 */
+.card, .accordion {
+  border-radius: 16px;
+  box-shadow: 0 3px 16px #2986cc22;
+  background: #fff;
+  color: #222946;
 }
-
 .btn {
   border-radius: 8px;
   font-weight: 700;
   letter-spacing: 0.04em;
+  transition: background .15s, box-shadow .15s;
 }
-
-/* マウスオーバー時 */
-.btn-primary:hover {
-  background: #0072b1;
+.btn-primary:hover, .btn-outline-light:hover {
+  background: #1266c0;
   color: #fff;
 }
+.navbar {
+  box-shadow: 0 0 8px #2986cc44;
+}
+
+/* フッター・ナビ装飾 */
+footer {
+  background: var(--bs-dark);
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+/* ダークモード用 */
 body.dark-mode {
   background-color: #181818 !important;
   color: #f1f1f1;
@@ -54,4 +62,3 @@ footer.dark-mode {
   background: #242526 !important;
   color: #eee !important;
 }
-/* 任意でlist, btn, h1等の追加装飾も */
