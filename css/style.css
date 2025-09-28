@@ -57,14 +57,6 @@ h1, h2, h3, .navbar-brand {
   font-size: 1.18em;
   letter-spacing: 0.03em;
 }
-
-/* フッター・ナビ装飾 */
-footer {
-  background: var(--bs-dark);
-  color: #fff;
-  letter-spacing: 0.05em;
-}
-
 /* ダークモード用 */
 body.dark-mode {
   background-color: #181818 !important;
