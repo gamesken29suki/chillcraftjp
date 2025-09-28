@@ -5,6 +5,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const footer = document.querySelector('footer');
   const cards = document.querySelectorAll('.card');
 
+  document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('memberSearch');
+  const roleSelect = document.getElementById('roleFilter');
+  const deptSelect = document.getElementById('deptFilter');
+  const cards = document.querySelectorAll('.member-card');
+  function filterMembers() {
+    const keyword = (searchInput.value || '').toLowerCase();
+    const role = roleSelect.value;
+    const dept = deptSelect ? deptSelect.value : "";
+    cards.forEach(card => {
+      const name = card.querySelector('.card-title').textContent.toLowerCase();
+      // flipカード裏側p要素も検索
+      const desc = card.querySelector('.flip-card-back p') 
+        ? card.querySelector('.flip-card-back p').textContent.toLowerCase() 
+        : "";
+      const roleClasses = card.className;
+      const deptValue = (card.dataset.dept || '').toLowerCase();
+      const matchKeyword = name.includes(keyword) || desc.includes(keyword);
+      const matchRole = (role === "") || roleClasses.includes(`border-${role}`);
+      const matchDept = (dept === "") || deptValue.includes(dept.toLowerCase());
+      card.parentElement.style.display = (matchKeyword && matchRole && matchDept) ? "" : "none";
+    });
+  }
+  searchInput.addEventListener('input', filterMembers);
+  roleSelect.addEventListener('change', filterMembers);
+  if(deptSelect) deptSelect.addEventListener('change', filterMembers);
+});
+
   // モード切替関数
   function setDarkMode(enable) {
     if(enable){
