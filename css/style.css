@@ -223,3 +223,13 @@ body.dark-mode .bubble-text {
   color: #eee;
   border-color: #45b6fe;
 }
+.sns-icons .btn {
+  border-radius: 50%;
+  padding: .4em .6em;
+  font-size: 1.1em;
+  margin: 0 .1em;
+  transition: background .14s, color .14s;
+}
+.sns-icons .btn-outline-primary:hover { background: #5865F2; color: #fff; } /* Discordカラー */
+.sns-icons .btn-outline-info:hover { background: #1da1f2; color: #fff; }   /* Twitterカラー */
+.sns-icons .btn-outline-purple:hover { background: #9146ff; color: #fff; } /* Twitchカラー */
