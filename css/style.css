@@ -110,3 +110,35 @@ footer.dark-mode {
   border-radius: 1em;
   box-shadow: 0 0 3px #0002;
 }
+.member-card {
+  transition: box-shadow .23s, transform .23s;
+}
+.member-card:hover {
+  box-shadow: 0 8px 32px #2986cc33;
+  transform: translateY(-6px) scale(1.025);
+}
+
+.card-title {
+  transition: color .22s, font-size .18s;
+}
+.member-card:hover .card-title {
+  color: #2986cc;
+  font-size: 1.08em;
+}
+
+.badge {
+  transition: background .22s, box-shadow .18s;
+}
+.badge:after {
+  content: "✨";
+  animation: shine 1.8s linear infinite;
+  margin-left: 4px;
+  opacity: .6;
+}
+
+@keyframes shine {
+  0% { filter: blur(0px); opacity: .6;}
+  30% { filter: blur(2px); opacity: 1;}
+  80% { filter: blur(0px); opacity: .5;}
+  100% { opacity: .6;}
+}
