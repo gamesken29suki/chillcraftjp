@@ -233,3 +233,37 @@ body.dark-mode .bubble-text {
 .sns-icons .btn-outline-primary:hover { background: #5865F2; color: #fff; } /* Discordカラー */
 .sns-icons .btn-outline-info:hover { background: #1da1f2; color: #fff; }   /* Twitterカラー */
 .sns-icons .btn-outline-purple:hover { background: #9146ff; color: #fff; } /* Twitchカラー */
+.flip-card {
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform .8s cubic-bezier(.47,2.24,.41,.76);
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%; height: 100%;
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  z-index: 2;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: #f3f5fa;
+  color: #222946;
+  padding: 1.3em 1em;
+  border-radius: 1.2rem;
+  box-shadow: 0 6px 28px #46b6ff28;
+}
+body.dark-mode .flip-card-back {
+  background: #222946;
+  color: #f1f1f1;
+}
