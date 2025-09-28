@@ -91,3 +91,22 @@ footer.dark-mode {
   border-radius: 1em;
   box-shadow: 0 0 3px #0002;
 }
+/* カード縁色／役職追加 */
+.border-builder   { border-width: 3px; border-color: #57ae45 !important; }     /* グリーン系 建築 */
+.border-artist    { border-width: 3px; border-color: #ff87ca !important; }     /* ピンク系 アートスタッフ */
+.border-supporter { border-width: 3px; border-color: #0097e6 !important; }     /* 水色系 サポーター */
+.border-streamer  { border-width: 3px; border-color: #d35400 !important; }     /* オレンジ系 ストリーマー */
+
+/* バッジ（役職ごと） */
+.badge.role-builder   { background: linear-gradient(90deg,#57ae45,#a6ec95 100%); color:#174d1b; }
+.badge.role-artist    { background: linear-gradient(90deg,#ff87ca,#ffc2e0 100%); color:#881e5c; }
+.badge.role-supporter { background: linear-gradient(90deg,#0097e6,#48dbfb 100%); color:#fff; }
+.badge.role-streamer  { background: linear-gradient(90deg,#d35400,#f9ca24 100%); color:#fff; }
+
+.badge {
+  font-size: .92em;
+  padding: .36em .9em;
+  margin-right: 0.15em;
+  border-radius: 1em;
+  box-shadow: 0 0 3px #0002;
+}
