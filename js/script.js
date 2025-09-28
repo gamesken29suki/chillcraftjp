@@ -133,3 +133,11 @@ document.getElementById('messageForm').onsubmit = function(e) {
   }
 };
 loadMessages();
+
+document.getElementById('faqSearch').addEventListener('input', function() {
+  const keyword = this.value.trim().toLowerCase();
+  document.querySelectorAll('#faqAccordion .accordion-item').forEach(item => {
+    const text = item.textContent.toLowerCase();
+    item.style.display = (!keyword || text.includes(keyword)) ? '' : 'none';
+  });
+});
