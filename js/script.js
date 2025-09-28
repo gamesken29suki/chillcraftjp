@@ -74,6 +74,7 @@ function vote(id) {
   n = n ? parseInt(n, 10) + 1 : 1;
   window.localStorage.setItem(key, n);
   document.getElementById('vote-' + id).textContent = n;
+  if (elem) elem.textContent = n;
 }
 
 // 初回読み込み時に数字セット
@@ -81,6 +82,7 @@ function vote(id) {
   let key = 'vote_' + id;
   let n = window.localStorage.getItem(key) || 0;
   document.getElementById('vote-' + id).textContent = n;
+  if (elem) elem.textContent = n;
 });
 function vote(id) {
   let key = 'vote_' + id;
@@ -88,6 +90,7 @@ function vote(id) {
   n = n ? parseInt(n, 10) + 1 : 1;
   window.localStorage.setItem(key, n);
   document.getElementById('vote-' + id).textContent = n;
+  if (elem) elem.textContent = n;
 }
 
 // 初回読み込み時に数字セット
@@ -95,6 +98,7 @@ function vote(id) {
   let key = 'vote_' + id;
   let n = window.localStorage.getItem(key) || 0;
   document.getElementById('vote-' + id).textContent = n;
+  if (elem) elem.textContent = n;
 });
 function vote(id) {
   let key = 'vote_' + id;
@@ -102,6 +106,7 @@ function vote(id) {
   n = n ? parseInt(n, 10) + 1 : 1;
   window.localStorage.setItem(key, n);
   document.getElementById('vote-' + id).textContent = n;
+  if (elem) elem.textContent = n;
 }
 
 // 初回読み込み時に数字セット
@@ -109,6 +114,7 @@ function vote(id) {
   let key = 'vote_' + id;
   let n = window.localStorage.getItem(key) || 0;
   document.getElementById('vote-' + id).textContent = n;
+  if (elem) elem.textContent = n;
 });
 function loadMessages() {
   const msgs = JSON.parse(localStorage.getItem('msgBoard') || '[]');
