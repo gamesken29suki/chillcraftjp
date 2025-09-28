@@ -40,6 +40,24 @@ h1, h2, h3, .navbar-brand {
   box-shadow: 0 0 8px #2986cc44;
 }
 
+/* サイドDiscordカード強調 */
+.bg-discord {
+  background: #5865F2 !important;
+  border-top-left-radius: 1em !important;
+  border-top-right-radius: 1em !important;
+  /* より目立たせたい場合下記も */
+  box-shadow: 0 4px 20px #5865f238;
+}
+
+/* カード内Discordヘッダー */
+.card .bg-discord {
+  border-top-left-radius: 1em !important;
+  border-top-right-radius: 1em !important;
+  font-weight: bold;
+  font-size: 1.18em;
+  letter-spacing: 0.03em;
+}
+
 /* フッター・ナビ装飾 */
 footer {
   background: var(--bs-dark);
@@ -62,42 +80,47 @@ footer.dark-mode {
   background: #242526 !important;
   color: #eee !important;
 }
-/* カード縁カラー */
+
+/* メンバーカード縁カラー */
 .border-gm     { border-width: 3px; border-color: #6e83ff !important; }
 .border-subgm  { border-width: 3px; border-color: #53e1c3 !important; }
 .border-mod    { border-width: 3px; border-color: #f9429e !important; }
 .border-tech   { border-width: 3px; border-color: #00b894 !important; }
 .border-event  { border-width: 3px; border-color: #ffd86b !important; }
+.border-builder   { border-width: 3px; border-color: #57ae45 !important; }
+.border-artist    { border-width: 3px; border-color: #ff87ca !important; }
+.border-supporter { border-width: 3px; border-color: #0097e6 !important; }
+.border-streamer  { border-width: 3px; border-color: #d35400 !important; }
 
 .member-card {
   border-radius: 1.2rem;
   background: #fff;
-  transition: box-shadow .18s;
+  transition: box-shadow .18s, transform .23s;
   border-style: solid;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #2986cc18;
 }
 .member-card:hover {
-  box-shadow: 0 4px 22px #2986cc33;
+  box-shadow: 0 8px 32px #2986cc33;
+  transform: translateY(-6px) scale(1.025);
+  z-index: 2;
 }
 
+.card-title {
+  transition: color .22s, font-size .18s;
+}
+.member-card:hover .card-title {
+  color: #2986cc;
+  font-size: 1.08em;
+}
+
+/* 役職バッジ */
 .badge.role-gm      { background: linear-gradient(90deg,#6e83ff 40%,#00c3ff 100%); color:#fff; font-weight: bold;}
 .badge.role-subgm   { background: linear-gradient(90deg,#53e1c3,#14ffc7 100%); color:#01554e;}
 .badge.role-mod     { background: linear-gradient(90deg,#f9429e,#ffb9d5 100%); color:#fff;}
 .badge.role-tech    { background: linear-gradient(90deg,#00b894,#55efc4 100%); color:#fff;}
 .badge.role-event   { background: linear-gradient(90deg,#ffd86b,#ffecb2 100%); color:#6a4d17;}
-.badge {
-  font-size: .92em;
-  padding: .36em .9em;
-  margin-right: 0.15em;
-  border-radius: 1em;
-  box-shadow: 0 0 3px #0002;
-}
-/* カード縁色／役職追加 */
-.border-builder   { border-width: 3px; border-color: #57ae45 !important; }     /* グリーン系 建築 */
-.border-artist    { border-width: 3px; border-color: #ff87ca !important; }     /* ピンク系 アートスタッフ */
-.border-supporter { border-width: 3px; border-color: #0097e6 !important; }     /* 水色系 サポーター */
-.border-streamer  { border-width: 3px; border-color: #d35400 !important; }     /* オレンジ系 ストリーマー */
-
-/* バッジ（役職ごと） */
 .badge.role-builder   { background: linear-gradient(90deg,#57ae45,#a6ec95 100%); color:#174d1b; }
 .badge.role-artist    { background: linear-gradient(90deg,#ff87ca,#ffc2e0 100%); color:#881e5c; }
 .badge.role-supporter { background: linear-gradient(90deg,#0097e6,#48dbfb 100%); color:#fff; }
@@ -109,24 +132,6 @@ footer.dark-mode {
   margin-right: 0.15em;
   border-radius: 1em;
   box-shadow: 0 0 3px #0002;
-}
-.member-card {
-  transition: box-shadow .23s, transform .23s;
-}
-.member-card:hover {
-  box-shadow: 0 8px 32px #2986cc33;
-  transform: translateY(-6px) scale(1.025);
-}
-
-.card-title {
-  transition: color .22s, font-size .18s;
-}
-.member-card:hover .card-title {
-  color: #2986cc;
-  font-size: 1.08em;
-}
-
-.badge {
   transition: background .22s, box-shadow .18s;
 }
 .badge:after {
@@ -142,10 +147,20 @@ footer.dark-mode {
   80% { filter: blur(0px); opacity: .5;}
   100% { opacity: .6;}
 }
+
+/* カード装飾アニメ+グラデ+登場 */
 .member-card {
   background: linear-gradient(100deg, #fff 90%, #f4f8ff 120%);
-  position: relative;
-  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeIn .8s ease-in-out forwards;
+  animation-delay: .12s;
+}
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .member-card::before {
   content: "";
@@ -161,19 +176,9 @@ footer.dark-mode {
   0%,100% { transform: scale(1) }
   50% { transform: scale(1.18) opacity: .35 }
 }
-.member-card {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: cardFadeIn .8s ease-in-out forwards;
-  animation-delay: .12s;
-}
-@keyframes cardFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.member-card { position: relative; cursor: pointer; }
+.member-card { cursor: pointer; }
+
+/* 吹き出し（紹介文） */
 .bubble-text {
   display: none;
   position: absolute;
@@ -206,7 +211,6 @@ footer.dark-mode {
   60%  { opacity: .96; transform: translateX(-50%) scale(1.08) translateY(-2px);}
   100% { opacity: 1; transform: translateX(-50%) scale(1) translateY(0);}
 }
-/* ふきだしの三角 */
 .bubble-text:after {
   content: "";
   position: absolute;
@@ -223,6 +227,8 @@ body.dark-mode .bubble-text {
   color: #eee;
   border-color: #45b6fe;
 }
+
+/* SNSアイコン装飾 */
 .sns-icons .btn {
   border-radius: 50%;
   padding: .4em .6em;
@@ -230,43 +236,11 @@ body.dark-mode .bubble-text {
   margin: 0 .1em;
   transition: background .14s, color .14s;
 }
-.sns-icons .btn-outline-primary:hover { background: #5865F2; color: #fff; } /* Discordカラー */
-.sns-icons .btn-outline-info:hover { background: #1da1f2; color: #fff; }   /* Twitterカラー */
-.sns-icons .btn-outline-purple:hover { background: #9146ff; color: #fff; } /* Twitchカラー */
-.flip-card {
-  perspective: 1000px;
-}
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform .8s cubic-bezier(.47,2.24,.41,.76);
-  transform-style: preserve-3d;
-}
-.flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
-}
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%; height: 100%;
-  backface-visibility: hidden;
-}
-.flip-card-front {
-  z-index: 2;
-}
-.flip-card-back {
-  transform: rotateY(180deg);
-  background: #f3f5fa;
-  color: #222946;
-  padding: 1.3em 1em;
-  border-radius: 1.2rem;
-  box-shadow: 0 6px 28px #46b6ff28;
-}
-body.dark-mode .flip-card-back {
-  background: #222946;
-  color: #f1f1f1;
-}
+.sns-icons .btn-outline-primary:hover { background: #5865F2; color: #fff; }
+.sns-icons .btn-outline-info:hover { background: #1da1f2; color: #fff; }
+.sns-icons .btn-outline-purple:hover { background: #9146ff; color: #fff; }
+
+/* ギャラリー・カルーセルアレンジ */
 #galleryCarousel {
   border-radius: 1.1rem;
   overflow: hidden;
@@ -282,16 +256,33 @@ body.dark-mode .flip-card-back {
   padding: .5em 1em;
   left: 8%; right: 8%; bottom: 2em;
 }
-.bg-discord { background: #5865F2; }
+.carousel-indicators [data-bs-target] {
+  background-color: #2986cc;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: drop-shadow(0 0 6px #2986cc44);
+}
+
+/* FAQアレンジ */
+#faqAccordion .accordion-item {
+  border-radius: 1em;
+  box-shadow: 0 2px 8px #2986cc11;
+  margin-bottom: 1em;
+  border: none;
+}
 #faqAccordion .accordion-button {
   font-weight: bold;
   color: #2986cc;
+  border-radius: 1em 1em 0 0;
 }
 #faqAccordion .accordion-button:not(.collapsed) {
   background: linear-gradient(90deg, #e0ecfcaa 20%, #f3f5fa 90%);
   color: #1c3e82;
+  border-radius: 1em 1em 0 0;
 }
 #faqAccordion .accordion-body {
   border-left: 4px solid #2986cc60;
   background: #f8fbff;
+  border-radius: 0 .5rem .5rem .5rem;
 }
