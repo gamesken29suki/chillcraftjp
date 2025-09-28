@@ -68,3 +68,45 @@ function toggleBubble(card) {
   // 自分をtoggle
   card.classList.toggle('show-bubble');
 }
+function vote(id) {
+  let key = 'vote_' + id;
+  let n = window.localStorage.getItem(key);
+  n = n ? parseInt(n, 10) + 1 : 1;
+  window.localStorage.setItem(key, n);
+  document.getElementById('vote-' + id).textContent = n;
+}
+
+// 初回読み込み時に数字セット
+['build1'].forEach(id => {
+  let key = 'vote_' + id;
+  let n = window.localStorage.getItem(key) || 0;
+  document.getElementById('vote-' + id).textContent = n;
+});
+function vote(id) {
+  let key = 'vote_' + id;
+  let n = window.localStorage.getItem(key);
+  n = n ? parseInt(n, 10) + 1 : 1;
+  window.localStorage.setItem(key, n);
+  document.getElementById('vote-' + id).textContent = n;
+}
+
+// 初回読み込み時に数字セット
+['build2'].forEach(id => {
+  let key = 'vote_' + id;
+  let n = window.localStorage.getItem(key) || 0;
+  document.getElementById('vote-' + id).textContent = n;
+});
+function vote(id) {
+  let key = 'vote_' + id;
+  let n = window.localStorage.getItem(key);
+  n = n ? parseInt(n, 10) + 1 : 1;
+  window.localStorage.setItem(key, n);
+  document.getElementById('vote-' + id).textContent = n;
+}
+
+// 初回読み込み時に数字セット
+['build3'].forEach(id => {
+  let key = 'vote_' + id;
+  let n = window.localStorage.getItem(key) || 0;
+  document.getElementById('vote-' + id).textContent = n;
+});
