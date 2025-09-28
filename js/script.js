@@ -32,3 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setDarkMode(!root.classList.contains('dark-mode'));
   });
 });
+function toggleBubble(card) {
+  // すべて閉じる
+  document.querySelectorAll('.member-card').forEach(function(el){
+    if(el !== card) el.classList.remove('show-bubble');
+  });
+  // 自分をtoggle
+  card.classList.toggle('show-bubble');
+}
