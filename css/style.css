@@ -218,3 +218,8 @@ footer.dark-mode {
   border-color: #fff transparent transparent transparent;
   filter: drop-shadow(0 2px 6px #6e83ff33);
 }
+body.dark-mode .bubble-text {
+  background: #242526;
+  color: #eee;
+  border-color: #45b6fe;
+}
