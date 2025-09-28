@@ -261,6 +261,31 @@ function toggleBubble(card) {
   });
   card.classList.toggle('show-bubble');
 }
+    document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('memberSearch');
+  const roleSelect = document.getElementById('roleFilter');
+  const cards = document.querySelectorAll('.member-card');
+
+  function filterMembers() {
+    const keyword = (searchInput.value || '').toLowerCase();
+    const role = roleSelect.value;
+    cards.forEach(card => {
+      const name = card.querySelector('.card-title').textContent.toLowerCase();
+      const desc = card.querySelector('.bubble-text').textContent.toLowerCase();
+      const roleClasses = card.className;
+      const matchKeyword = name.includes(keyword) || desc.includes(keyword);
+      const matchRole = (role === "") || roleClasses.includes(`border-${role}`);
+      if (matchKeyword && matchRole) {
+        card.parentElement.style.display = "";
+      } else {
+        card.parentElement.style.display = "none";
+      }
+    });
+  }
+
+  searchInput.addEventListener('input', filterMembers);
+  roleSelect.addEventListener('change', filterMembers);
+});
 </script>
 </body>
 </html>
