@@ -324,3 +324,52 @@ body.dark-mode .bubble-text {
   padding: .4em .8em;
   pointer-events: none;
 }
+.custom-footer {
+  background: linear-gradient(90deg, #222946 60%, #2986cc 140%);
+  color: #f2f6fb;
+  letter-spacing: 0.05em;
+}
+.custom-footer a, .custom-footer .brand-footer {
+  color: #fff;
+  text-decoration: none;
+  transition: color .13s;
+}
+.custom-footer a.footer-link:hover, .custom-footer .brand-footer:hover {
+  color: #ffe457;
+  text-decoration: underline;
+}
+.btn-discord {
+  background: #5865F2;
+  color: #fff;
+  border: none;
+}
+.btn-discord:hover {
+  background: #404eed;
+  color: #fff;
+}
+.btn-twitter {
+  background: #1da1f2;
+  color: #fff;
+  border: none;
+}
+.btn-twitter:hover {
+  background: #188cd8;
+  color: #fff;
+}
+.custom-footer .btn-secondary {
+  background: #222946;
+  color: #ffd86b;
+  border: none;
+}
+.custom-footer .btn-secondary:hover {
+  background: #2986cc;
+  color: #fff;
+}
+.footer-desc {
+  font-size: 0.98em;
+  opacity: 0.66;
+}
+.brand-footer {
+  vertical-align: middle;
+  letter-spacing: 0.09em;
+}
