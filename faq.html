@@ -55,58 +55,90 @@
   </nav>
   <main class="container mt-5">
     <h2 class="mb-4"><i class="fa-solid fa-hands-helping"></i>FAQ（よくある質問）</h2>
-    <div class="accordion" id="faqAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq1-heading">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
-            Q. 初心者でも参加できますか？
-          </button>
-        </h2>
-        <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            はい！Minecraft初心者・Hypixel初体験でも大丈夫です。運営やメンバーがサポートします。
-          </div>
-        </div>
+   <div class="mb-3">
+  <input type="text" id="faqSearch" class="form-control" placeholder="キーワードでFAQ検索（例：参加、Discord、VC）">
+</div>
+<div class="accordion" id="faqAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="faqQ1">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqA1">
+        Q. 初心者でも参加できますか？
+      </button>
+    </h2>
+    <div id="faqA1" class="accordion-collapse collapse show" aria-labelledby="faqQ1">
+      <div class="accordion-body">
+      はい！Minecraft初心者・Hypixel初体験でも大丈夫です。運営やメンバーがサポートします。
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq2-heading">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-            Q. VCは参加必須ですか？
-          </button>
-        </h2>
-        <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            VC（ボイスチャット）は任意です。「聞き専」やテキストチャットだけの利用も歓迎です！
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq3-heading">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-            Q. ギルドイベントの参加・見学はできますか？
-          </button>
-        </h2>
-        <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            どなたでも自由に参加・見学可能です。Discordのお知らせをご確認ください。
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq4-heading">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-            Q. ギルドに入りたいです。どうすれば？
-          </button>
-        </h2>
-        <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            <b>Discordサーバー</b>に参加し、「#参加申請チャンネル」や運営へ直接ご相談ください。<br>
-            <a href="https://discord.gg/YE9gFAGrQe" target="_blank" class="btn btn-success btn-sm mt-2">Discord参加はこちら</a>
-          </div>
-        </div>
-      </div>
-      <!-- 質問をさらに追加可能 -->
     </div>
+  </div>
+  <!-- 他の質問ブロックも同形式で追加 -->
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="faqQ2">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqA2">
+        Q. VCは参加必須ですか？
+      </button>
+    </h2>
+    <div id="faqA2" class="accordion-collapse collapse show" aria-labelledby="faqQ2">
+      <div class="accordion-body">
+        VC（ボイスチャット）は任意です。「聞き専」やテキストチャットだけの利用も歓迎です！
+      </div>
+    </div>
+  </div>
+   <!-- 他の質問ブロックも同形式で追加 -->
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="faqQ3">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqA3">
+        Q. ギルドイベントへの参加・見学はできますか？
+      </button>
+    </h2>
+    <div id="faqA3" class="accordion-collapse collapse show" aria-labelledby="faqQ3">
+      <div class="accordion-body">
+        どなたでも自由に参加・見学可能です。Discordのお知らせをご確認ください。
+      </div>
+    </div>
+  </div>
+   <!-- 他の質問ブロックも同形式で追加 -->
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="faqQ4">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqA4">
+        Q. ギルドに参加したい場合はどうれば良いですか？
+      </button>
+    </h2>
+    <div id="faqA4" class="accordion-collapse collapse show" aria-labelledby="faqQ4">
+      <div class="accordion-body">
+       <strong>Discordサーバー</strong>に参加し、「#参加申請チャンネル」や運営へ直接ご相談ください。
+        <a href="https://discord.gg/YE9gFAGrQe" target="_blank" class="btn btn-success btn-sm mt-2">Discord参加はこちら</a>
+      </div>
+    </div>
+  </div>
+   <!-- 他の質問ブロックも同形式で追加 -->
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="faqQ5">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqA5">
+        Q. 初心者でも大丈夫？
+      </button>
+    </h2>
+    <div id="faqA5" class="accordion-collapse collapse show" aria-labelledby="faqQ5">
+      <div class="accordion-body">
+        どなたでも歓迎！Discordで質問どうぞ。
+      </div>
+    </div>
+  </div>
+   <!-- 他の質問ブロックも同形式で追加 -->
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="faqQ1">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqA1">
+        Q. 初心者でも大丈夫？
+      </button>
+    </h2>
+    <div id="faqA1" class="accordion-collapse collapse show" aria-labelledby="faqQ1">
+      <div class="accordion-body">
+        どなたでも歓迎！Discordで質問どうぞ。
+      </div>
+    </div>
+  </div>
+   <!-- 他の質問ブロックも同形式で追加 -->
+</div>
   </main>
   <footer class="custom-footer mt-5">
   <div class="container py-4">
