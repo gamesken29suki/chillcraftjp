@@ -110,3 +110,26 @@ function vote(id) {
   let n = window.localStorage.getItem(key) || 0;
   document.getElementById('vote-' + id).textContent = n;
 });
+function loadMessages() {
+  const msgs = JSON.parse(localStorage.getItem('msgBoard') || '[]');
+  const ul = document.getElementById('msgBoard');
+  ul.innerHTML = '';
+  msgs.forEach(txt => {
+    let li = document.createElement('li');
+    li.className = 'list-group-item d-flex align-items-center';
+    li.innerHTML = `<i class="fa-solid fa-user me-2 text-info"></i>${txt}`;
+    ul.appendChild(li);
+  });
+}
+document.getElementById('messageForm').onsubmit = function(e) {
+  e.preventDefault();
+  const input = document.getElementById('msgText');
+  if(input.value.trim()) {
+    let msgs = JSON.parse(localStorage.getItem('msgBoard') || '[]');
+    msgs.push(input.value);
+    localStorage.setItem('msgBoard', JSON.stringify(msgs));
+    input.value = '';
+    loadMessages();
+  }
+};
+loadMessages();
