@@ -59,6 +59,26 @@
      <div class="container my-5">
   <h2 class="mb-4">ChillCraftJP メンバー一覧</h2>
   <div class="row g-4 mb-4">
+<!-- 検索入力・ロール選択 -->
+<div class="row mb-4 align-items-center">
+  <div class="col-md-6">
+    <input type="text" id="memberSearch" class="form-control" placeholder="名前・紹介文で検索…">
+  </div>
+  <div class="col-md-4">
+    <select id="roleFilter" class="form-select">
+      <option value="">全役職</option>
+      <option value="gm">GM</option>
+      <option value="subgm">SubGM</option>
+      <option value="mod">Moderator</option>
+      <option value="tech">Tech Staff</option>
+      <option value="event">Event Staff</option>
+      <option value="builder">Builder</option>
+      <option value="artist">Artist Staff</option>
+      <option value="supporter">Supporter</option>
+      <option value="streamer">Streamer</option>
+    </select>
+  </div>
+</div>
 
     <!-- 上段：GM, SubGM, Moderator -->
     <div class="col-md-4">
@@ -243,6 +263,31 @@ function toggleBubble(card) {
   });
   card.classList.toggle('show-bubble');
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('memberSearch');
+  const roleSelect = document.getElementById('roleFilter');
+  const cards = document.querySelectorAll('.member-card');
+
+  function filterMembers() {
+    const keyword = (searchInput.value || '').toLowerCase();
+    const role = roleSelect.value;
+    cards.forEach(card => {
+      const name = card.querySelector('.card-title').textContent.toLowerCase();
+      const desc = card.querySelector('.bubble-text').textContent.toLowerCase();
+      const roleClasses = card.className;
+      const matchKeyword = name.includes(keyword) || desc.includes(keyword);
+      const matchRole = (role === "") || roleClasses.includes(`border-${role}`);
+      if (matchKeyword && matchRole) {
+        card.parentElement.style.display = "";
+      } else {
+        card.parentElement.style.display = "none";
+      }
+    });
+  }
+
+  searchInput.addEventListener('input', filterMembers);
+  roleSelect.addEventListener('change', filterMembers);
+});
 </script>
 </body>
 </html>
