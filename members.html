@@ -273,6 +273,7 @@ function toggleBubble(card) {
   const cards = document.querySelectorAll('.member-card');
   const memberCount = document.getElementById('memberCount');
   const noHitAlert = document.getElementById('noHitAlert');
+  const totalCount = cards.length; // カード全体数を一度だけ取得
 
   function filterMembers() {
     const keyword = (searchInput.value || '').toLowerCase();
@@ -292,18 +293,13 @@ function toggleBubble(card) {
         card.parentElement.style.display = "none";
       }
     });
-
-    // 件数表示
-    if (keyword || role) {
-      memberCount.textContent = `該当メンバー数：${hitCount}人`;
-    } else {
-      memberCount.textContent = "";
-    }
-
+    // 件数表示（常時表示：全体x人中、該当y人）
+    memberCount.textContent = `全体：${totalCount}人中、該当：${hitCount}人`;
     // ヒットなしアラート表示
     noHitAlert.style.display = (hitCount === 0) ? "inline" : "none";
   }
-
+    // 初回ロード時およびイベントハンドラ
+ filterMembers();
   searchInput.addEventListener('input', filterMembers);
   roleSelect.addEventListener('change', filterMembers);
 });
