@@ -17,7 +17,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-11W8MT3NS3"></script>
@@ -59,76 +58,26 @@
      <div class="container my-5">
   <h2 class="mb-4">ChillCraftJP メンバー一覧</h2>
   <div class="row g-4 mb-4">
-<!-- 検索入力・ロール選択 -->
-<div class="row mb-4 align-items-center">
-  <div class="col-md-6">
-    <input type="text" id="memberSearch" class="form-control" placeholder="名前・紹介文で検索…">
-  </div>
-  <div class="col-md-4">
-    <div class="row mb-4 align-items-center">
-  <div class="col-md-4">
-    <input type="text" id="memberSearch" class="form-control" placeholder="名前・詳細で検索…">
-  </div>
-  <div class="col-md-3">
-    <select id="roleFilter" class="form-select"> ... </select>
-  </div>
-  <div class="col-md-3">
-    <select id="deptFilter" class="form-select">
-      <option value="">全部門</option>
-      <option value="管理">運営・管理</option>
-      <option value="技術">技術・開発</option>
-      <option value="企画">イベント企画</option>
-      <option value="芸術">アート・デザイン</option>
-      <option value="配信">ストリーマー</option>
-      <option value="サポート">Supporter</option>
-    </select>
-  </div>
-</div>
-    <select id="roleFilter" class="form-select">
-      <option value="">全役職</option>
-      <option value="gm">GM</option>
-      <option value="subgm">SubGM</option>
-      <option value="mod">Moderator</option>
-      <option value="tech">Tech Staff</option>
-      <option value="event">Event Staff</option>
-      <option value="builder">Builder</option>
-      <option value="artist">Artist Staff</option>
-      <option value="supporter">Supporter</option>
-      <option value="streamer">Streamer</option>
-    </select>
-  </div>
-</div>
 
     <!-- 上段：GM, SubGM, Moderator -->
     <div class="col-md-4">
-      <div class="card member-card border-gm text-center" onclick="toggleBubble(this)">
+      <div class="card member-card border-gm text-center">
         <div class="card-body">
           <img src="img/gm.jpg" class="rounded-circle mb-2" width="80" alt="GMアイコン">
           <h5 class="card-title">gamesken29suki</h5>
           <span class="badge role-gm">GM（ギルドマスター）</span>
-          <div class="sns-icons mt-2">
-  <a href="https://discordapp.com/users/gamesken29suki" class="btn btn-outline-primary btn-sm ms-1" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-  <a href="https://twitter.com/gamesken29suki2" class="btn btn-outline-info btn-sm ms-1" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-  <a href="https://twitch.tv/gamesken29suki" class="btn btn-outline-purple btn-sm ms-1" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
-</div>
             <div class="bubble-text">
       まったり癒し系ギルド主。何でも遠慮なく！
-              
     </div>
         </div>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card member-card border-subgm text-center" onclick="toggleBubble(this)">
+      <div class="card member-card border-subgm text-center">
         <div class="card-body">
           <img src="img/subgm.jpg" class="rounded-circle mb-2" width="80" alt="SubGMアイコン">
           <h5 class="card-title">Kazuya_1126</h5>
           <span class="badge role-subgm">SubGM（サブマスター）</span>
-          <div class="sns-icons mt-2">
-  <a href="https://discordapp.com/users/xxxxxxx" class="btn btn-outline-primary btn-sm ms-1" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-  <a href="https://twitter.com/xxxxxx" class="btn btn-outline-info btn-sm ms-1" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-  <a href="https://twitch.tv/xxxxxx" class="btn btn-outline-purple btn-sm ms-1" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
-</div>
             <div class="bubble-text">
       縁の下の力持ち！サブ運営担当です。
     </div>
@@ -136,16 +85,11 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card member-card border-mod text-center" onclick="toggleBubble(this)">
+      <div class="card member-card border-mod text-center">
         <div class="card-body">
           <img src="img/mod.jpg" class="rounded-circle mb-2" width="80" alt="Moderatorアイコン">
           <h5 class="card-title">GameBoyie</h5>
           <span class="badge role-mod">Moderator</span>
-          <div class="sns-icons mt-2">
-  <a href="https://discordapp.com/users/xxxxxxx" class="btn btn-outline-primary btn-sm ms-1" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-  <a href="https://twitter.com/xxxxxx" class="btn btn-outline-info btn-sm ms-1" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-  <a href="https://twitch.tv/xxxxxx" class="btn btn-outline-purple btn-sm ms-1" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
-</div>
             <div class="bubble-text">
       トラブル対応・安心サポート役です！
     </div>
@@ -157,16 +101,11 @@
   <!-- 下段：Tech staff・Event staff -->
   <div class="row g-4">
     <div class="col-md-6 col-lg-4">
-      <div class="card member-card border-tech text-center" onclick="toggleBubble(this)">
+      <div class="card member-card border-tech text-center">
         <div class="card-body">
           <img src="img/tech.jpg" class="rounded-circle mb-2" width="80" alt="Tech Staffアイコン">
           <h5 class="card-title">akasakatech</h5>
           <span class="badge role-tech">Tech Staff</span>
-          <div class="sns-icons mt-2">
-  <a href="https://discordapp.com/users/xxxxxxx" class="btn btn-outline-primary btn-sm ms-1" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-  <a href="https://twitter.com/xxxxxx" class="btn btn-outline-info btn-sm ms-1" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-  <a href="https://twitch.tv/xxxxxx" class="btn btn-outline-purple btn-sm ms-1" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
-</div>
             <div class="bubble-text">
       HP・Botまわり担当！技術相談も得意です。
             </div>
@@ -174,16 +113,11 @@
       </div>
     </div>
     <div class="col-md-6 col-lg-4">
-      <div class="card member-card border-event text-center" onclick="toggleBubble(this)">
+      <div class="card member-card border-event text-center">
         <div class="card-body">
           <img src="img/event.jpg" class="rounded-circle mb-2" width="80" alt="Event Staffアイコン">
           <h5 class="card-title">IZUMI714</h5>
           <span class="badge role-event">Event Staff</span>
-          <div class="sns-icons mt-2">
-  <a href="https://discordapp.com/users/xxxxxxx" class="btn btn-outline-primary btn-sm ms-1" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-  <a href="https://twitter.com/xxxxxx" class="btn btn-outline-info btn-sm ms-1" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-  <a href="https://twitch.tv/xxxxxx" class="btn btn-outline-purple btn-sm ms-1" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
-</div>
             <div class="bubble-text">
       楽しいイベントをどんどん企画！企画提案も歓迎。
     </div>
@@ -193,16 +127,11 @@
     <!-- 他のスタッフ or メンバーも続けて追加OK -->
     <!-- Builder Staff -->
   <div class="col-md-6 col-lg-4">
-    <div class="card member-card border-builder text-center" onclick="toggleBubble(this)">
+    <div class="card member-card border-builder text-center">
       <div class="card-body">
         <img src="img/builder.jpg" class="rounded-circle mb-2" width="80" alt="Builder Staffアイコン">
         <h5 class="card-title">KenBuilder</h5>
         <span class="badge role-builder">Builder</span>
-        <div class="sns-icons mt-2">
-  <a href="https://discordapp.com/users/xxxxxxx" class="btn btn-outline-primary btn-sm ms-1" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-  <a href="https://twitter.com/xxxxxx" class="btn btn-outline-info btn-sm ms-1" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-  <a href="https://twitch.tv/xxxxxx" class="btn btn-outline-purple btn-sm ms-1" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
-</div>
           <div class="bubble-text">
       建築や装飾が得意！建築ギルドを主導します。
     </div>
@@ -212,16 +141,11 @@
 
   <!-- Artist Staff -->
   <div class="col-md-6 col-lg-4">
-    <div class="card member-card border-artist text-center" onclick="toggleBubble(this)">
+    <div class="card member-card border-artist text-center">
       <div class="card-body">
         <img src="img/artist.jpg" class="rounded-circle mb-2" width="80" alt="Artist Staffアイコン">
         <h5 class="card-title">ArtYuka</h5>
         <span class="badge role-artist">Artist Staff</span>
-        <div class="sns-icons mt-2">
-  <a href="https://discordapp.com/users/xxxxxxx" class="btn btn-outline-primary btn-sm ms-1" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-  <a href="https://twitter.com/xxxxxx" class="btn btn-outline-info btn-sm ms-1" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-  <a href="https://twitch.tv/xxxxxx" class="btn btn-outline-purple btn-sm ms-1" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
-</div>
           <div class="bubble-text">
       アート・デザイン担当。ギルドロゴやバナー制作！
     </div>
@@ -231,16 +155,11 @@
 
   <!-- Supporter -->
   <div class="col-md-6 col-lg-4">
-    <div class="card member-card border-supporter text-center" onclick="toggleBubble(this)">
+    <div class="card member-card border-supporter text-center">
       <div class="card-body">
         <img src="img/support.jpg" class="rounded-circle mb-2" width="80" alt="Supporterアイコン">
         <h5 class="card-title">Maki_Support</h5>
         <span class="badge role-supporter">Supporter</span>
-        <div class="sns-icons mt-2">
-  <a href="https://discordapp.com/users/xxxxxxx" class="btn btn-outline-primary btn-sm ms-1" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-  <a href="https://twitter.com/xxxxxx" class="btn btn-outline-info btn-sm ms-1" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-  <a href="https://twitch.tv/xxxxxx" class="btn btn-outline-purple btn-sm ms-1" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
-</div>
           <div class="bubble-text">
       困った時にサポート！質問も大歓迎です。
     </div>
@@ -250,16 +169,11 @@
 
   <!-- Streamer -->
   <div class="col-md-6 col-lg-4">
-    <div class="card member-card border-streamer text-center" onclick="toggleBubble(this)">
+    <div class="card member-card border-streamer text-center">
       <div class="card-body">
         <img src="img/streamer.jpg" class="rounded-circle mb-2" width="80" alt="Streamerアイコン">
         <h5 class="card-title">SoraStream</h5>
         <span class="badge role-streamer">Streamer</span>
-        <div class="sns-icons mt-2">
-  <a href="https://discordapp.com/users/xxxxxxx" class="btn btn-outline-primary btn-sm ms-1" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-  <a href="https://twitter.com/xxxxxx" class="btn btn-outline-info btn-sm ms-1" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-  <a href="https://twitch.tv/xxxxxx" class="btn btn-outline-purple btn-sm ms-1" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
-</div>
           <div class="bubble-text">
       配信や動画でギルドを盛り上げます！コラボもお気軽に。
     </div>
@@ -281,40 +195,6 @@ function toggleBubble(card) {
     if(el !== card) el.classList.remove('show-bubble');
   });
   card.classList.toggle('show-bubble');
-}
-document.addEventListener('DOMContentLoaded', () => {
-  const searchInput = document.getElementById('memberSearch');
-  const roleSelect = document.getElementById('roleFilter');
-  const cards = document.querySelectorAll('.member-card');
-
-  function filterMembers() {
-    const keyword = (searchInput.value || '').toLowerCase();
-    const role = roleSelect.value;
-    cards.forEach(card => {
-      const name = card.querySelector('.card-title').textContent.toLowerCase();
-      const desc = card.querySelector('.bubble-text').textContent.toLowerCase();
-      const roleClasses = card.className;
-      const matchKeyword = name.includes(keyword) || desc.includes(keyword);
-      const matchRole = (role === "") || roleClasses.includes(`border-${role}`);
-      if (matchKeyword && matchRole) {
-        card.parentElement.style.display = "";
-      } else {
-        card.parentElement.style.display = "none";
-      }
-    });
-  }
-
-  searchInput.addEventListener('input', filterMembers);
-  roleSelect.addEventListener('change', filterMembers);
-});
-    function flipCard(btn){
-  // ボタン→一番近い.flip-cardを探す
-  const card = btn.closest('.flip-card');
-  card.classList.toggle('flipped');
-  // 他のカードを戻す場合は下記を追加
-  document.querySelectorAll('.flip-card').forEach(el => {
-    if(el!==card) el.classList.remove('flipped');
-  });
 }
 </script>
 </body>
