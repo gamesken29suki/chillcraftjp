@@ -62,3 +62,32 @@ footer.dark-mode {
   background: #242526 !important;
   color: #eee !important;
 }
+/* カード縁カラー */
+.border-gm     { border-width: 3px; border-color: #6e83ff !important; }
+.border-subgm  { border-width: 3px; border-color: #53e1c3 !important; }
+.border-mod    { border-width: 3px; border-color: #f9429e !important; }
+.border-tech   { border-width: 3px; border-color: #00b894 !important; }
+.border-event  { border-width: 3px; border-color: #ffd86b !important; }
+
+.member-card {
+  border-radius: 1.2rem;
+  background: #fff;
+  transition: box-shadow .18s;
+  border-style: solid;
+}
+.member-card:hover {
+  box-shadow: 0 4px 22px #2986cc33;
+}
+
+.badge.role-gm      { background: linear-gradient(90deg,#6e83ff 40%,#00c3ff 100%); color:#fff; font-weight: bold;}
+.badge.role-subgm   { background: linear-gradient(90deg,#53e1c3,#14ffc7 100%); color:#01554e;}
+.badge.role-mod     { background: linear-gradient(90deg,#f9429e,#ffb9d5 100%); color:#fff;}
+.badge.role-tech    { background: linear-gradient(90deg,#00b894,#55efc4 100%); color:#fff;}
+.badge.role-event   { background: linear-gradient(90deg,#ffd86b,#ffecb2 100%); color:#6a4d17;}
+.badge {
+  font-size: .92em;
+  padding: .36em .9em;
+  margin-right: 0.15em;
+  border-radius: 1em;
+  box-shadow: 0 0 3px #0002;
+}
