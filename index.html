@@ -99,12 +99,26 @@
     </div>
     <div class="col-md-4">
       <!-- ギルドイメージ or バナー -->
-      <div class="card shadow mb-4">
-        <img src="img/gallery1.png" class="card-img-top" alt="ギルド活動イメージ">
-        <div class="card-body text-center">
-          <small class="text-muted">活動の様子・最新スクリーンショット！</small>
-        </div>
-      </div>
+     <div id="galleryCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/gallery1.png" class="d-block w-100" alt="活動画像1">
+    </div>
+    <div class="carousel-item">
+      <img src="img/gallery2.png" class="d-block w-100" alt="活動画像2">
+    </div>
+    <div class="carousel-item">
+      <img src="img/gallery3.png" class="d-block w-100" alt="活動画像3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
     </div>
   </div>
 
@@ -148,6 +162,35 @@
           </div>
         </div>
       </div>
+    <div class="accordion mb-5" id="faqAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="faq-q1">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#faq-a1" aria-expanded="true" aria-controls="faq-a1">
+        Q. 初心者でも大丈夫ですか？
+      </button>
+    </h2>
+    <div id="faq-a1" class="accordion-collapse collapse show" aria-labelledby="faq-q1">
+      <div class="accordion-body">
+        どなたでも大歓迎！Discordで気軽に質問もできます。
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="faq-q2">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#faq-a2" aria-expanded="false" aria-controls="faq-a2">
+        Q. イベント頻度は？
+      </button>
+    </h2>
+    <div id="faq-a2" class="accordion-collapse collapse" aria-labelledby="faq-q2">
+      <div class="accordion-body">
+        主に月1～2回を中心に開催しています。どなたでも参加OKです。
+      </div>
+    </div>
+  </div>
+  <!-- 必要に応じて追加OK -->
+</div>
       <div class="col-md-4">
         <div class="card">
           <div class="card-header bg-primary text-white">参加はこちら！</div>
@@ -157,6 +200,7 @@
           </div>
         </div>
       </div>
+    <iframe src="https://discord.com/widget?id=1421423707993280512&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </div>
   </main>
   <footer class="bg-dark text-white text-center py-3 mt-5">
