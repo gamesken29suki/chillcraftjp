@@ -142,3 +142,34 @@ footer.dark-mode {
   80% { filter: blur(0px); opacity: .5;}
   100% { opacity: .6;}
 }
+.member-card {
+  background: linear-gradient(100deg, #fff 90%, #f4f8ff 120%);
+  position: relative;
+  overflow: hidden;
+}
+.member-card::before {
+  content: "";
+  position: absolute;
+  left: -36px; top: -36px;
+  width: 72px; height: 72px;
+  background: radial-gradient(circle, #6e83ff80 40%, transparent 80%);
+  opacity: .22;
+  pointer-events: none;
+  animation: pulse 2.3s infinite;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1) }
+  50% { transform: scale(1.18) opacity: .35 }
+}
+.member-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeIn .8s ease-in-out forwards;
+  animation-delay: .12s;
+}
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
