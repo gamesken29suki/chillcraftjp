@@ -304,13 +304,23 @@ body.dark-mode .bubble-text {
 }
 .gallery-thumb {
   overflow: hidden;
+  border-radius: .9em;
   box-shadow: 0 4px 16px #2986cc11;
   position: relative;
-  border-radius: .9em;
 }
-.gallery-thumb img { transition: transform .21s; }
-.gallery-thumb:hover img { transform: scale(1.06);}
+.gallery-thumb img {
+  transition: transform .22s;
+}
+.gallery-thumb:hover img {
+  transform: scale(1.05);
+}
 .gallery-caption {
-  font-size: 0.97em;
+  font-size: .97em;
+  position: absolute;
   bottom: 0; left: 0; right: 0;
+  background: rgba(34,41,70,0.68);
+  color: #fff;
+  border-radius: 0 0 .9em .9em;
+  padding: .4em .8em;
+  pointer-events: none;
 }
