@@ -79,6 +79,12 @@
     </select>
   </div>
 </div>
+    <div class="row mb-2">
+  <div class="col">
+    <span id="memberCount" class="fw-bold text-primary"></span>
+    <span id="noHitAlert" class="text-danger ms-3" style="display:none;">該当メンバーは見つかりませんでした。</span>
+  </div>
+</div>
     <!-- 上段：GM, SubGM, Moderator -->
     <div class="col-md-4">
       <div class="card member-card border-gm text-center">
@@ -265,10 +271,14 @@ function toggleBubble(card) {
   const searchInput = document.getElementById('memberSearch');
   const roleSelect = document.getElementById('roleFilter');
   const cards = document.querySelectorAll('.member-card');
+  const memberCount = document.getElementById('memberCount');
+  const noHitAlert = document.getElementById('noHitAlert');
 
   function filterMembers() {
     const keyword = (searchInput.value || '').toLowerCase();
     const role = roleSelect.value;
+    let hitCount = 0;
+
     cards.forEach(card => {
       const name = card.querySelector('.card-title').textContent.toLowerCase();
       const desc = card.querySelector('.bubble-text').textContent.toLowerCase();
@@ -277,15 +287,27 @@ function toggleBubble(card) {
       const matchRole = (role === "") || roleClasses.includes(`border-${role}`);
       if (matchKeyword && matchRole) {
         card.parentElement.style.display = "";
+        hitCount++;
       } else {
         card.parentElement.style.display = "none";
       }
     });
+
+    // 件数表示
+    if (keyword || role) {
+      memberCount.textContent = `該当メンバー数：${hitCount}人`;
+    } else {
+      memberCount.textContent = "";
+    }
+
+    // ヒットなしアラート表示
+    noHitAlert.style.display = (hitCount === 0) ? "inline" : "none";
   }
 
   searchInput.addEventListener('input', filterMembers);
   roleSelect.addEventListener('change', filterMembers);
 });
+
 </script>
 </body>
 </html>
